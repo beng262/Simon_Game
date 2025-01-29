@@ -13,6 +13,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private int score = 0;
+    private String username; // Declare username variable
     private TextView scoreText;
     private ArrayList<Integer> simonSequence = new ArrayList<>();
     private int currentIndex = 0;
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Retrieve the username from the Intent
+        username = getIntent().getStringExtra("username");
 
         scoreText = findViewById(R.id.scoreText);
         Button buttonRed = findViewById(R.id.buttonRed);
@@ -88,8 +92,10 @@ public class MainActivity extends AppCompatActivity {
                 generateNextInSequence();
             }
         } else {
+            // Send the username and score to ScoreboardActivity
             Intent intent = new Intent(this, ScoreboardActivity.class);
-            intent.putExtra("score", score);
+            intent.putExtra("username", username); // Pass the username to ScoreboardActivity
+            intent.putExtra("score", score);       // Pass the score to ScoreboardActivity
             startActivity(intent);
             finish();
         }

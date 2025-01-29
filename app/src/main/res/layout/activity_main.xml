@@ -22,7 +22,7 @@
         android:columnCount="2"
         android:gravity="center">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonGreen"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -30,15 +30,15 @@
             android:contentDescription="@string/green_button"
             android:elevation="8dp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonRed"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:backgroundTint="@color/red"
+            android:background="@drawable/button_red"
             android:contentDescription="@string/red_button"
             android:elevation="8dp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonBlue"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -46,7 +46,7 @@
             android:contentDescription="@string/blue_button"
             android:elevation="8dp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonYellow"
             android:layout_width="150dp"
             android:layout_height="150dp"

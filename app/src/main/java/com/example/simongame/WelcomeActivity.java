@@ -19,7 +19,7 @@ public class WelcomeActivity extends AppCompatActivity {
         startGameButton.setOnClickListener(v -> {
             String username = usernameInput.getText().toString();
             Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-            intent.putExtra("username", username);
+            intent.putExtra("username", username); // Pass the username to MainActivity
             startActivity(intent);
         });
     }
